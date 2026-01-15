@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Intelligence Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📊 Business Intelligence Pro</h1>
+        <p>Doble clic en cualquier valor para editarlo</p>
+    </header>
+
+    <div class="cash-section">
+        <div class="card card-cash">
+            <h3>💵 Efectivo</h3>
+            <span id="display-efectivo" class="amount" ondblclick="habilitarEdicionDinero('efectivo', this)">0</span>
+            <div class="input-group">
+                <input type="number" id="input-efectivo" placeholder="Añadir">
+                <button onclick="sumarDinero('efectivo')">+</button>
+            </div>
+        </div>
+
+        <div class="card card-bank">
+            <h3>🏦 Banco</h3>
+            <span id="display-cuenta" class="amount" ondblclick="habilitarEdicionDinero('cuenta', this)">0</span>
+            <div class="input-group">
+                <input type="number" id="input-cuenta" placeholder="Añadir">
+                <button onclick="sumarDinero('cuenta')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ai-assistant" class="ai-box"></div>
+
+    <div class="product-form-container">
+        <h3>📝 Registrar Producto</h3>
+        <div class="product-form">
+            <input type="text" id="p-nombre" placeholder="Nombre">
+            <input type="number" id="p-cantidad" placeholder="Cantidad">
+            <input type="number" id="p-compra" placeholder="Costo Compra">
+            <input type="number" id="p-venta" placeholder="Precio Venta">
+            <button onclick="agregarProducto()" class="btn-main">Guardar</button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Costo (u)</th>
+                    <th>Venta (u)</th>
+                    <th>ROI</th>
+                    <th>Total Compra</th>
+                    <th>Total Venta</th>
+                    <th>Ganancia</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="lista-productos"></tbody>
+            <tfoot id="totales-inventario"></tfoot>
+        </table>
+    </div>
+
+    <div class="totals-section">
+        <h2 class="main-balance">
+            PATRIMONIO TOTAL: $<span id="balance-total">0</span>
+        </h2>
+        <p>(Efectivo + Banco + Total Venta de Stock)</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
