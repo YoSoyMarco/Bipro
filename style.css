@@ -195,13 +195,6 @@ table button:hover {
     text-align: center;
 }
 
-.main-balance {
-    font-size: 3rem;
-    color: #facc15;
-}
-
-/* ... (mismo inicio que ya tienes) ... */
-
 .rent-badge {
     font-size: 0.85rem;
 }
@@ -213,7 +206,7 @@ table button:hover {
 
 /* Corregir el cierre de la última clase que estaba mal en tu archivo */
 .main-balance {
-    font-size: 3rem;
-    color: #facc15;
+    font-size: 1.5rem;
+    color: #ffe100;
     margin: 10px 0;
 }
